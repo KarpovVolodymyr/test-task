@@ -1,8 +1,6 @@
 # Test Task
 
-## Project Info and Structure
-
-The structure of this project was based on [NX][NX] main principles
+The structure of this project is based on [NX][NX] main principles
 
 
 ### Project Structure:

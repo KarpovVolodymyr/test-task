@@ -1,0 +1,49 @@
+<div [formGroup]="formGroup" class="card mb-3">
+  <div class="card-body">
+    <button type="button" class="btn-close" aria-label="Close"
+            (click)="remove.emit(index)"></button>
+    <h5>Form {{ index + 1 }}</h5>
+
+    <!--Input for Country -->
+    <div class="form-group">
+      <label for="country-{{ index }}">Country</label>
+      <input
+        id="country-{{ index }}"
+        class="form-control"
+        formControlName="country"
+        [ngbTypeahead]="searchCountries"
+        [inputFormatter]="formatter"
+        [resultFormatter]="formatter"
+        [formValidation]="fields.Country"
+      />
+    </div>
+
+    <!-- Username Input -->
+    <div class="form-group">
+      <label for="username-{{ index }}">Username</label>
+      <input
+        id="username-{{ index }}"
+        class="form-control"
+        formControlName="username"
+        [formValidation]="fields.Username"
+      />
+    </div>
+
+    <!-- Datepicker Input -->
+    <div class="form-group">
+      <label for="dob-{{ index }}">Birthday</label>
+      <div class="input-group">
+        <input
+          id="dob-{{ index }}"
+          class="form-control"
+          formControlName="dob"
+          ngbDatepicker
+          #d="ngbDatepicker"
+          (click)="d.toggle()"
+          [maxDate]="maxDate"
+          [formValidation]="fields.Dob"
+        />
+      </div>
+    </div>
+  </div>
+</div>

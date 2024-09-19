@@ -1,6 +1,6 @@
 # Test Task
 
-## 1. General Project Info & Structure
+## Project Info and Structure
 
 The structure of this project was based on [NX][NX] main principles
 
